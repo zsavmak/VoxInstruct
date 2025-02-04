@@ -39,7 +39,7 @@ class VoxInstructNAR(nn.Module):
             bos_token_id=hp.bos_id,
             eos_token_id=hp.eos_id,
             attention_dropout=hp.attn_dropout_p,
-            _attn_implementation="flash_attention_2"
+            #_attn_implementation="flash_attention_2"
         )
         self.model = LlamaModel(config=lm_config)
         # Non-causal for NAR model
